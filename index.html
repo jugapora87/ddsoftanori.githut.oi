@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoWeb Anorí | I.E. Anorí</title>
+    <link rel="stylesheet" href="estiloS.css" />
+  </head>
+  <body>
+    <header class="encabezado" id="inicio">
+      <nav class="nav contenedor">
+        <a class="marca" href="#inicio">
+          <img src="logo-institucion.png" alt="Escudo de la Institución Educativa Anorí" />
+          <span
+            ><small>INSTITUCIÓN EDUCATIVA</small><strong>ANORÍ</strong><b>Media Técnica</b
+            ><small>Diseño y Desarrollo de Software</small></span
+          >
+        </a>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <div class="enlaces" id="enlaces">
+          <a href="#inicio">⌂ Inicio</a><a href="#consejos">Consejos</a><a href="#reto">♧ Reto ecológico</a
+          ><a href="#tecnologias">Tecnologías</a>
+        </div>
+      </nav>
+      <section class="hero contenedor">
+        <div class="hero-texto">
+          <span class="etiqueta"> “Innovación Sostenible: Ciencia, Arte y Tecnología por el Planeta” </span>
+          <h1>EcoWeb <span>Anorí</span></h1>
+          <h2>Programación y desarrollo web para un planeta mejor</h2>
+          <p>
+            Un proyecto de la Media Técnica en Diseño y Desarrollo de Software para promover el cuidado del
+            medioambiente a través de la tecnología.
+          </p>
+          <a class="boton principal" href="#reto">🌿 Comenzar el reto <span>↓</span></a>
+        </div>
+        <div class="hero-visual" arial-label="Ilustración ambiental">
+          <img src="ecoweb.png" alt="EcoWebAnori" />
+
+          <!--        <div class="sol"></div><div class="planeta">🌎</div>
+        <div class="portatil"><div class="puntos"><i></i><i></i><i></i></div><code><span>&lt;html&gt;</span><br><b> &lt;css&gt;</b><br><em>&lt;javascript&gt;</em></code></div>
+        <div class="hoja hoja1">🌿</div><div class="hoja hoja2">🍃</div>-->
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="seccion contenedor" id="consejos">
+        <div class="titulo-fila">
+          <div>
+            <span class="etiqueta">Ideas para el día a día</span>
+            <h2>🍃 Consejos ambientales</h2>
+          </div>
+          <p>Haz clic en cada tarjeta para conocer un consejo diferente.</p>
+        </div>
+        <div class="tarjetas">
+          <article class="tarjeta agua">
+            <div class="icono">💧</div>
+            <div>
+              <h3>Cuidado del Agua</h3>
+              <p>El agua es vida, ¡úsala con responsabilidad!</p>
+              <button class="boton consejo-btn" data-consejo="agua">Ver consejo <span>›</span></button>
+            </div>
+          </article>
+          <article class="tarjeta reciclaje">
+            <div class="icono">♻️</div>
+            <div>
+              <h3>Separación de Residuos</h3>
+              <p>Clasificar residuos ayuda a proteger el planeta.</p>
+              <button class="boton consejo-btn" data-consejo="residuos">Ver consejo <span>›</span></button>
+            </div>
+          </article>
+          <article class="tarjeta bosque">
+            <div class="icono">🌳</div>
+            <div>
+              <h3>Cuidado de los Ecosistemas</h3>
+              <p>Los bosques y la biodiversidad son nuestro hogar.</p>
+              <button class="boton consejo-btn" data-consejo="arboles">Ver consejo <span>›</span></button>
+            </div>
+          </article>
+        </div>
+        <div class="mensaje" id="mensajeConsejo" aria-live="polite">
+          💡 Selecciona una tarjeta para descubrir una acción que puedes aplicar en tu vida diaria. <br>
+        </div>
+      </section>
+
+      <section class="reto-banda" id="reto">
+        <div class="contenedor reto-contenido">
+          <div class="reto-titulo">
+            <div class="trofeo">🏆</div>
+            <div>
+              <h2>Reto Ecológico <span>🎮</span></h2>
+              <p>Responde las preguntas y demuestra cuánto sabes sobre el <strong>cuidado del planeta.</strong></p>
+            </div>
+          </div>
+          <div class="estadisticas">
+            <div><span>❔</span><small>Pregunta</small><strong id="numeroPregunta">1 / 5</strong></div>
+            <div><span>⭐</span><small>Puntaje</small><strong id="puntaje">0</strong></div>
+            <div><span>✅</span><small>Aciertos</small><strong id="aciertos">0</strong></div>
+          </div>
+          <button class="boton principal iniciar" id="iniciarReto">▶ Iniciar reto</button>
+        </div>
+        <div class="contenedor quiz-wrap" id="quizWrap" hidden>
+          <article class="quiz">
+            <div class="quiz-top">
+              <span id="progresoTexto">Pregunta 1 de 5</span>
+              <div class="barra"><span id="barraProgreso"></span></div>
+            </div>
+            <div class="residuo" id="residuo">🍌</div>
+            <h3 id="pregunta">¿Dónde clasificamos una cáscara de banano?</h3>
+            <div class="opciones" id="opciones"></div>
+            <p class="retro" id="retro" aria-live="polite">Elige una respuesta para continuar.</p>
+            <button class="boton principal" id="siguiente" disabled>Siguiente →</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="seccion contenedor" id="tecnologias">
+        <div class="titulo centrado">
+          <span class="etiqueta">Detrás de la página</span>
+          <h2>Tres tecnologías, un proyecto</h2>
+          <p>HTML estructura, CSS diseña y JavaScript permite interactuar.</p>
+        </div>
+        <div class="tech-grid">
+          <article class="tech html">
+            <div class="tech-icon">&lt;/&gt;</div>
+            <h3>HTML</h3>
+            <b>La estructura</b>
+            <p>Organiza títulos, textos, tarjetas, imágenes y botones.</p>
+            <code>&lt;h1&gt;EcoWeb Anorí&lt;/h1&gt;</code>
+          </article>
+          <article class="tech css">
+            <div class="tech-icon">✦</div>
+            <h3>CSS</h3>
+            <b>La apariencia</b>
+            <p>Controla colores, tamaños, espacios y adaptación a celulares.</p>
+            <code>color: #168a4b;</code>
+          </article>
+          <article class="tech js">
+            <div class="tech-icon">{ }</div>
+            <h3>JavaScript</h3>
+            <b>La interacción</b>
+            <p>Detecta clics, muestra consejos, revisa respuestas y suma puntos.</p>
+            <code>puntaje = puntaje + 1;</code>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="contenedor pie">
+        <div>
+          🌿 <strong>Institución Educativa Anorí</strong><br /><small
+            >Media Técnica · Diseño y Desarrollo de Software</small
+          >
+        </div>
+        <div>
+          🌎 “Innovación Sostenible: Ciencia, Arte y Tecnología por el Planeta”<br /><small
+            >Feria de la Ciencia, el Arte y la Tecnología 2026</small
+          >
+        </div>
+        <div>🌱 Juntos por un Anorí más limpio y sostenible</div>
+      </div>
+    </footer>
+    <script src="interactividad.js"></script>
+  </body>
+</html>
